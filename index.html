@@ -30,7 +30,7 @@
         <h2>Projetos</h2>
         <ul>
             <li>
-                <div class="card-img"><img src="./assets/images/Projeto1.jpg" alt=""></div>
+                <div class="card-img" id="card-1"></div>
                 <div class="card-info">
                     <h3>FiapFilmes</h3>
                     <h4>HTML, CSS, JS</h4>
@@ -39,29 +39,47 @@
                 </div>
             </li>
             <li>
-                <div class="card-img">
-                    <img src="" alt="">
-                </div>
+                <div class="card-img" id="card-2"></div>
                 <div class="card-info">
                     <h3></h3>
                     <h4></h4>
                     <p></p>
-                    <a href=""></a>
+                    <a href="#" class="button">Saiba Mais</a>
                 </div>
             </li>
             <li>
-                <div class="card-img">
-                    <img src="" alt="">
-                </div>
+                <div class="card-img" id="card-3"></div>
                 <div class="card-info">
                     <h3></h3>
                     <h4></h4>
                     <p></p>
-                    <a href=""></a>
+                    <a href="#" class="button">Saiba Mais</a>
                 </div>
             </li>
         </ul>
     </section>
 
+    <section id="section-budged">
+        <form action="#">
+            <h4>Orçamento</h4>
+            <label for="quantidade">Quantidade de páginas</label>
+            <input type="number" id="quantidade" min="1" value="1">
+        <!-- placeholder="digite a quantidade" -->
+            <label for="JS">Precisa de JS?</label>
+            <input type="checkbox" id="JS">
+            <label for="layout">Precisa de layout?</label>
+            <div>
+                <input type="radio" id="layout-sim" name="layout">
+                <label for="layout-sim">Sim, preciso</label>
+                <input type="radio" id="layout-nao" name="layout">
+                <label for="layout-nao">Não, já tenho</label>
+            </div>
+            <label for="prazo">Prazo</label>
+            <input type="range" id="prazo" min="1" max="10">
+            <output id="preco">R$ 100,00</output>
+        </form>
+    </section>
+
+<script src="./assets/js/script.js"> </script>
 </body>
 </html>
