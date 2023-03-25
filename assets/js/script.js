@@ -27,8 +27,8 @@ function atualizarOrcamento(){
 
     if(JS) preco *= 1.1
     if(layout) preco += inputQuantidade.value * 30
-    let taxaDeUrgencia = 1 - prazo * 0.05
-    preco *= taxaDeUrgencia
+    let taxaDeUrgencia = 1 - prazo * .05
+    preco *= 1 + taxaDeUrgencia
 
-    document.querySelector("#preco").innerHTML = "R$ " + preco
+    document.querySelector("#preco").innerHTML = "R$ " + preco.toFixed(2)
 }
