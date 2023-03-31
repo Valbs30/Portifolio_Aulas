@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@900&display=swap');
 ;
 
- * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,17 +14,72 @@
     --font-default: 'Montserrat';
 }
 
-html {
+html{
     font-size: 62.5%;
 }
 
-body {
+body{
     margin: 0;
     font-family: var(--font-default);
-    color: var(--text-primary);
+    background-color: #fff;
 }
 
-header {
+
+#hamburger{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#hamburger .linha{
+    width: 100%;
+    height: .5rem;
+    background-color: var(--text-primary);
+    box-shadow: 0 0.2rem .2rem #000;
+}
+
+nav ul{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    right: -20rem;
+    padding: 0;
+    background-color: #fff;
+    width: 20rem;
+    height: 30vh;
+    z-index: 9;
+    transition: right 1s;
+}
+
+#menu li{
+    list-style: none;
+}
+
+#menu a{
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--text-secundary);
+}
+
+#menu a:hover{
+    color: #F7A933;
+}
+
+.menu-show{
+    right: 0;
+}
+
+header{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -35,7 +90,7 @@ header {
     position: relative;
 }
 
-header::before {
+header::before{
     content: '';
     height: 100%;
     width: 100%;
@@ -48,13 +103,21 @@ header::before {
     animation: zoom 10s;
 }
 
-@keyframes zoom {
+@keyframes zoom{
     0%{
         transform: scale(1.5);
     }
     100%{
         transform: scale(1);
     }
+}
+
+#h1h{
+    color: var(--text-primary);
+}
+
+#spanh{
+    color: var(--text-primary);
 }
 
 h1, h2, h3, h4 {
@@ -85,23 +148,23 @@ span {
     text-align: center;
 }
 
-.button:hover {
+.button:hover{
     transform: scale(1.1);
     box-shadow: 0 0 10px #F7A933;
 }
 
-#button-header {
+#button-header{
     margin-top: 70vh;
 }
 
-img.avatar {
+img.avatar{
     border-radius: 50%;
     height: 43rem;
     width: 43rem;
     border: .4rem solid #000;
 }
 
-.section-presentation {
+.section-presentation{
     display: flex;
     color: var(--text-secundary);
     background-color: #cacaca;
@@ -109,26 +172,26 @@ img.avatar {
     gap: 3rem;
 }
 
-.section-presentation div {
+.section-presentation div{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
 }
 
-#section-projects {
+#section-projects{
     background-color: #212121;
     padding: 5rem;
 }
 
-#section-projects ul {
+#section-projects ul{
     display: flex;
     justify-content: space-around;
     gap: 4rem;
     margin-top: 2rem;
 }
 
-#section-projects li {
+#section-projects li{
     list-style: none;
     position: relative;
     cursor: pointer;
@@ -141,22 +204,22 @@ img.avatar {
     border: .4rem solid #000;
 }
 
-#card-1 {
+#card-1{
     background-image: url(../images/Projeto1.jpg);
     background-size: cover;
 }
 
-#card-2 {
+#card-2{
     background-image: url(../images/Projeto2.jpg);
     background-size: cover;
 }
 
-#card-3 {
+#card-3{
     background-image: url(../images/Projeto3.jpg);
     background-size: cover;
 }
 
-.card-info {
+.card-info{
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -172,12 +235,12 @@ img.avatar {
     color: #F7A933;
 }
 
-#section-projects li:hover .card-info {
+#section-projects li:hover .card-info{
     opacity: 1;
     bottom: 20%;
 }
 
-#section-budged {
+#section-budged{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,7 +249,7 @@ img.avatar {
     background-size: cover;
 }
 
-#section-budged form {
+#section-budged form{
     display: grid;
     font-family: var(--font-default);
     font-size: 2rem;
@@ -202,7 +265,7 @@ img.avatar {
     padding: 5rem;
 }
 
-#section-budged form h2 {
+#section-budged form h2{
     position: absolute;
     top: -15%;
     left: 2%;
@@ -211,6 +274,6 @@ img.avatar {
     border-radius: 5px;
 }
 
-#section-budged form output {
+#section-budged form output{
     grid-column: 2;
 }
